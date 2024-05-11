@@ -2,6 +2,7 @@ import {Routes, Route} from "react-router-dom";
 import Navbar from './components/navbar/navbar.jsx';
 import Hero from './components/hero/Hero.jsx';
 import Astros from './components/astros/Astros.jsx';
+import About from './components/about/about.jsx';
 import './App.css';
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
       text:"astros",
       link: "/astros",
     },
+    {
+      id: 4,
+      text:"about",
+      link: "/about",
+    }
   ];
   return(
     <>
@@ -27,6 +33,7 @@ function App() {
      <Routes>
        <Route element={<Hero />} path="/" />
        <Route element={<Astros />} path="/astros" />
+       <Route element={<About/>} path="/about"/>
      </Routes>
    </>
   );
